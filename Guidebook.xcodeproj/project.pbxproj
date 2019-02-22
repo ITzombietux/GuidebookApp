@@ -22,6 +22,7 @@
 		8390C47E20DDF4B100F6955B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C47D20DDF4B100F6955B /* Constants.swift */; };
 		8390C48620DE08EF00F6955B /* Place.realm in Resources */ = {isa = PBXBuildFile; fileRef = 8390C48520DE08EF00F6955B /* Place.realm */; };
 		8390C48820DE094F00F6955B /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C48720DE094F00F6955B /* PlaceService.swift */; };
+		935DF4DF221FAE2600C0CE73 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */; };
 		AD4D160610A01C9296838C67 /* Pods_Guidebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473737D802D23BFA904D0F08 /* Pods_Guidebook.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		8390C47D20DDF4B100F6955B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8390C48520DE08EF00F6955B /* Place.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Place.realm; sourceTree = "<group>"; };
 		8390C48720DE094F00F6955B /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceCell.swift; path = ../../../../../Documents/PlaceCell.swift; sourceTree = "<group>"; };
 		AA729B23BB3814CABB2304A6 /* Pods-Guidebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guidebook/Pods-Guidebook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 		8390C46820DDF05D00F6955B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				8390C47820DDF0CE00F6955B /* Place.swift in Sources */,
 				8390C45620DDEFC600F6955B /* AppDelegate.swift in Sources */,
 				8390C47A20DDF0D900F6955B /* Fave.swift in Sources */,
+				935DF4DF221FAE2600C0CE73 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
