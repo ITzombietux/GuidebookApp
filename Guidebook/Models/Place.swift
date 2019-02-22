@@ -15,7 +15,7 @@ class Place: Object {
     @objc dynamic var name:String?
     @objc dynamic var address:String?
     @objc dynamic var summary:String?
-    var lat:Double?
-    var long:Double?
+    @objc dynamic var lat:Double = 0
+    @objc dynamic var long:Double = 0
     
 }

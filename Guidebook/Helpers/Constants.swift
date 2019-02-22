@@ -16,6 +16,7 @@ struct Constants {
         static let detailSegue = "toDetail"
         
         static let placeCellId = "PlaceCell"
+        static let noteCellId = "NoteCell"
         
         static let notesViewController = "NotesViewController"
         static let composeViewController = "ComposeViewController"

@@ -9,27 +9,44 @@
 import UIKit
 
 class ComposeViewController: UIViewController {
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    var place: Place?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelTapped(_ sender: UIButton) {
+        
+        dismiss(animated: false, completion: nil)
     }
-    */
-
+    
+    
+    @IBAction func saveTapped(_ sender: UIButton) {
+        
+        guard place != nil else {
+            return
+        }
+        
+        // Create the note
+        var note = Note()
+        note.text = textView.text
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d, yyyy - h:mm a"
+        
+        note.date = formatter.string(from: Date())
+        note.placeId = place!.placeId!
+        
+        // Save the note
+        NoteService.addNote(note)
+        
+        // Dismiss the view controller
+        dismiss(animated: false, completion: nil)
+    }
+    
 }

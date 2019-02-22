@@ -20,9 +20,11 @@
 		8390C47A20DDF0D900F6955B /* Fave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C47920DDF0D900F6955B /* Fave.swift */; };
 		8390C47C20DDF0E300F6955B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C47B20DDF0E300F6955B /* Note.swift */; };
 		8390C47E20DDF4B100F6955B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C47D20DDF4B100F6955B /* Constants.swift */; };
-		8390C48620DE08EF00F6955B /* Place.realm in Resources */ = {isa = PBXBuildFile; fileRef = 8390C48520DE08EF00F6955B /* Place.realm */; };
 		8390C48820DE094F00F6955B /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390C48720DE094F00F6955B /* PlaceService.swift */; };
 		935DF4DF221FAE2600C0CE73 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */; };
+		935DF4E1221FFDF900C0CE73 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DF4E0221FFDF900C0CE73 /* NoteCell.swift */; };
+		935DF4E32220005D00C0CE73 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935DF4E22220005D00C0CE73 /* NoteService.swift */; };
+		935DF4E5222015E300C0CE73 /* Place.realm in Resources */ = {isa = PBXBuildFile; fileRef = 935DF4E4222015E300C0CE73 /* Place.realm */; };
 		AD4D160610A01C9296838C67 /* Pods_Guidebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473737D802D23BFA904D0F08 /* Pods_Guidebook.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +46,11 @@
 		8390C47920DDF0D900F6955B /* Fave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fave.swift; sourceTree = "<group>"; };
 		8390C47B20DDF0E300F6955B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8390C47D20DDF4B100F6955B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8390C48520DE08EF00F6955B /* Place.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Place.realm; sourceTree = "<group>"; };
 		8390C48720DE094F00F6955B /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceCell.swift; path = ../../../../../Documents/PlaceCell.swift; sourceTree = "<group>"; };
+		935DF4E0221FFDF900C0CE73 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteCell.swift; path = ../../../../../Documents/NoteCell.swift; sourceTree = "<group>"; };
+		935DF4E22220005D00C0CE73 /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteService.swift; path = ../../../../../Documents/NoteService.swift; sourceTree = "<group>"; };
+		935DF4E4222015E300C0CE73 /* Place.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Place.realm; sourceTree = "<group>"; };
 		AA729B23BB3814CABB2304A6 /* Pods-Guidebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guidebook/Pods-Guidebook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				935DF4DE221FAE2600C0CE73 /* PlaceCell.swift */,
+				935DF4E0221FFDF900C0CE73 /* NoteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				8390C48720DE094F00F6955B /* PlaceService.swift */,
+				935DF4E22220005D00C0CE73 /* NoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -172,7 +178,7 @@
 		8390C48420DE08C100F6955B /* Realms */ = {
 			isa = PBXGroup;
 			children = (
-				8390C48520DE08EF00F6955B /* Place.realm */,
+				935DF4E4222015E300C0CE73 /* Place.realm */,
 			);
 			path = Realms;
 			sourceTree = "<group>";
@@ -241,7 +247,7 @@
 				8390C46020DDEFC600F6955B /* LaunchScreen.storyboard in Resources */,
 				8390C45D20DDEFC600F6955B /* Assets.xcassets in Resources */,
 				8390C45B20DDEFC600F6955B /* Main.storyboard in Resources */,
-				8390C48620DE08EF00F6955B /* Place.realm in Resources */,
+				935DF4E5222015E300C0CE73 /* Place.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8390C47420DDF0B700F6955B /* ComposeViewController.swift in Sources */,
+				935DF4E1221FFDF900C0CE73 /* NoteCell.swift in Sources */,
 				8390C47620DDF0BE00F6955B /* MapViewController.swift in Sources */,
 				8390C47220DDF0AE00F6955B /* NotesViewController.swift in Sources */,
 				8390C47020DDF0A400F6955B /* DetailViewController.swift in Sources */,
 				8390C46E20DDF09B00F6955B /* PlacesViewController.swift in Sources */,
 				8390C47E20DDF4B100F6955B /* Constants.swift in Sources */,
+				935DF4E32220005D00C0CE73 /* NoteService.swift in Sources */,
 				8390C47C20DDF0E300F6955B /* Note.swift in Sources */,
 				8390C48820DE094F00F6955B /* PlaceService.swift in Sources */,
 				8390C47820DDF0CE00F6955B /* Place.swift in Sources */,
