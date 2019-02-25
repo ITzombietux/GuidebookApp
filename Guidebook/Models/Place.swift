@@ -17,5 +17,5 @@ class Place: Object {
     @objc dynamic var summary:String?
     @objc dynamic var lat:Double = 0
     @objc dynamic var long:Double = 0
-    
+    @objc dynamic var filename: String?
 }

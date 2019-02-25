@@ -13,6 +13,8 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     var place: Place?
     var notes: Results<Note>?
 
@@ -21,6 +23,11 @@ class NotesViewController: UIViewController {
 
         // Get notes for the place
         if place != nil {
+            
+            // Set the title
+            navBar.topItem?.title = place!.name
+            
+            // Getting the notes
             notes = NoteService.getNotes(place!.placeId!, updates: {
                 
                 // Notes result set has updated, so reload the tableview

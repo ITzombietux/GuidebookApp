@@ -35,6 +35,7 @@ class DetailViewController: UIViewController {
         nameLabel.text = p.name
         addressLabel.text = p.address
         summaryLabel.text = p.summary
+        placeImageView.image = UIImage(named: p.filename!)
     }
     
     @IBAction func backTapped(_ sender: UIButton) {

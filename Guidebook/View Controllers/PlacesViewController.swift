@@ -130,7 +130,7 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
             actionTitle = "Fave"
         }
         
-        let rowAction = UITableViewRowAction(style: .default, title: actionTitle) { (action, indexPath) in
+        let rowAction = UITableViewRowAction(style: .normal, title: actionTitle) { (action, indexPath) in
             
             // Toggle the fave
             FaveService.toggleFave(p!.placeId!)
@@ -143,5 +143,38 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return [rowAction]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        // Creating a UIView for the section header
+        let view = UIView()
+        
+        // Create a label
+        let label = UILabel()
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Create and add the auto layout constraints for the label inthe view
+        let leftLabelConstraint = NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 10)
+        
+        let topLabelConstraint = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 10)
+        
+        // Add the label into the view
+        view.addSubview(label)
+        
+        // Add the constraints to the view
+        view.addConstraints([leftLabelConstraint, topLabelConstraint])
+        
+        // Set the label text
+        if tableView.numberOfSections > 1 && section == 0 {
+            label.text = "Faves"
+        } else {
+            label.text = "All Places"
+        }
+        
+        // Return the view
+        return view
     }
 }
